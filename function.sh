@@ -22,6 +22,8 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
     alias q 'qs -c ii'
     alias gc 'git commit -m'
+    alias gs 'git status'
+    alias gp 'git push'
     alias dcu 'docker compose up -d'
     alias dcd 'docker compose down -v'
     alias arch "sudo pacman"
