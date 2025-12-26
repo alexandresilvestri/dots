@@ -20,15 +20,15 @@ if status is-interactive # Commands to run in interactive sessions can go here
     # Aliases
     alias ls 'eza --icons'
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
-    alias q 'qs -c ii'
     alias gc 'git commit -m'
     alias gs 'git status'
     alias gp 'git push'
+    alias gch 'git checkout'
     alias dcu 'docker compose up -d'
-    alias dcd 'docker compose down -v'
-    alias arch "sudo pacman"
-    alias update "arch -Syu"
-    alias cat "bat --paging=never"
+    alias dcd 'docker compose down'
+    alias arch 'sudo pacman'
+    alias cat 'bat --paging=never'
+    alias dc 'docker compose'
 
 end
 
