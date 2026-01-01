@@ -22,7 +22,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     # Aliases
     alias ls 'eza --icons'
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
-    alias gc 'git commit -m'
+    alias gc 'git commit'
     alias gs 'git status'
     alias ga 'git add'
     alias gp 'git push'
