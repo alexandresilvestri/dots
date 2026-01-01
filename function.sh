@@ -1,6 +1,8 @@
 set -eg QT_QPA_PLATFORM 2>/dev/null
 set -gx QT_QPA_PLATFORM xcb
 
+export COLORTERM=truecolor
+
 # Add Cargo bináries (Rust) to PATH
 if test -d "$HOME/.cargo/bin"
     set -gx PATH "$HOME/.cargo/bin" $PATH
@@ -35,3 +37,6 @@ end
 zoxide init fish | source
 
 
+
+# Add local bin to PATH for kubectl and other user binaries
+fish_add_path $HOME/.local/bin
