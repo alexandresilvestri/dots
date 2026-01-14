@@ -32,6 +32,8 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias arch 'sudo pacman'
     alias cat 'bat --paging=never'
     alias dc 'docker compose'
+    alias dev 'devcontainer open'
+    alias dev up 'devcontainer up'
 
 end
 
