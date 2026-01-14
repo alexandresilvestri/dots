@@ -33,7 +33,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias cat 'bat --paging=never'
     alias dc 'docker compose'
     alias dev 'devcontainer open'
-    alias dev up 'devcontainer up'
+    alias devup 'devcontainer up'
 
 end
 
