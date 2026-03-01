@@ -44,6 +44,31 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Aliases
+
+# --- Git Shortcuts ---
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gcn="git commit -n"
+alias gb="git branch"
+alias gch="git checkout"
+alias gph="git push"
+alias ghl="git pull"
+
+# -- Docker --
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dps="docker ps"
+
+# -- Others --
+alias pop="sudo apt"
+alias cat="bat --paging=never"
+alias ls="exa --icons"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+eval "$(zoxide init zsh)"
