@@ -10,6 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 * After completing a task that involves tool use, provide a quick summary of what you've done.
 * For maximum efficiency, whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
 * Before you finish, please verify your solution
+* After you finish, find the project command to running the tests, and run them all.
 * Do what has been asked; nothing more, nothing less.
 * NEVER create files unless they're absolutely necessary for achieving your goal.
 * ALWAYS prefer editing an existing file to creating a new one.
