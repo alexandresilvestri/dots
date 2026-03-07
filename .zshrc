@@ -65,10 +65,17 @@ alias dcd="docker compose down"
 alias dps="docker ps"
 
 # -- Others --
-alias pop="sudo apt"
+alias pop="sudo apt install && sudo apt update"
 alias cat="bat --paging=never"
 alias ls="exa --icons"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(zoxide init zsh)"
+
+# bun completions
+[ -s "/home/alexandresilvestri/.bun/_bun" ] && source "/home/alexandresilvestri/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
