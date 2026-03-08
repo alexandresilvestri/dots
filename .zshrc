@@ -66,6 +66,7 @@ alias dps="docker ps"
 
 # -- Others --
 alias pop="sudo apt install && sudo apt update"
+alias i="sudo apt install"
 alias cat="bat --paging=never"
 alias ls="exa --icons"
 
