@@ -56,7 +56,7 @@ alias gph="git push"
 alias ghl="git pull"
 # -- Docker --
 alias dc="docker compose"
-alias dcu="docker compose up"
+alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dps="docker ps"
 # -- Others --
