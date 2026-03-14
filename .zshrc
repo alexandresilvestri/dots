@@ -60,6 +60,7 @@ alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dps="docker ps"
 alias dcr="docker compose run --rm"
+alias ds="docker ps"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
