@@ -79,9 +79,6 @@ eval "$(zoxide init zsh)"
 # Mise for Ruby
 eval "$(~/.local/bin/mise activate)"
 
-# NPM
-export PATH="$(npm config get prefix)/bin:$PATH"
-
 # ASDF
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
