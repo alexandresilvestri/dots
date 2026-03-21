@@ -64,11 +64,8 @@ alias ds="docker ps"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
-# PopOS
-alias pop="sudo apt install && sudo apt update"
-alias i="sudo apt install"
-# Arch
 alias arch="sudo pacman"
+alias update="sudo pacman -Syu && yay -Syu"
 
 # Cargo (Rust)
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -82,3 +79,4 @@ eval "$(/usr/bin/mise activate)"
 # ASDF
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
