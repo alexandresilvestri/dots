@@ -77,7 +77,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(zoxide init zsh)"
 
 # Mise for Ruby
-eval "$(~/.local/mise activate)"
+eval "$(/usr/bin/mise activate)"
 
 # ASDF
 export ASDF_DATA_DIR="$HOME/.asdf"
