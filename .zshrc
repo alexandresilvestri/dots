@@ -45,6 +45,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
+# --- Arch --- #
+alias arch="sudo pacman"
+alias update="sudo pacman -Syu && yay -Syu"
 # --- Git Shortcuts ---
 alias gs="git status"
 alias ga="git add"
@@ -63,11 +66,13 @@ alias dps="docker ps"
 alias dcr="docker compose run --rm"
 alias ds="docker ps"
 alias ld="lazydocker"
+alias dce"docker compose exec"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
-alias arch="sudo pacman"
-alias update="sudo pacman -Syu && yay -Syu"
+alias dcr="docker compose exec web bin/rails"
+alias ps1="flatpak run org.duckstation.DuckStation & disown"
+alias ps2="flatpak run net.pcsx2.PCSX2 & disown"
 
 # Cargo (Rust)
 export PATH="$HOME/.cargo/bin:$PATH"
