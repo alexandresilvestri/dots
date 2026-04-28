@@ -1,36 +1,59 @@
-# CLAUDE.md
+1. Think Before Coding
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Don't assume. Don't hide confusion. Surface tradeoffs.
 
-## AI Guidance
+Before implementing:
 
-* To save main context space, for code searches, inspections, troubleshooting or analysis, use code-searcher subagent where appropriate - giving the subagent full context background for the task(s) you assign it.
-* ALWAYS read and understand relevant files before proposing code edits. Do not speculate about code you have not inspected. If the user references a specific file/path, you MUST open and inspect it before explaining or proposing fixes. Be rigorous and persistent in searching code for key facts. Thoroughly review the style, conventions, and abstractions of the codebase before implementing new features or abstractions.
-* After receiving tool results, carefully reflect on their quality and determine optimal next steps before proceeding. Use your thinking to plan and iterate based on this new information, and then take the best next action.
-* After completing a task that involves tool use, provide a quick summary of what you've done.
-* For maximum efficiency, whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
-* Before you finish, please verify your solution
-* After you finish, find the project command to running the tests, and run them all.
-* Do what has been asked; nothing more, nothing less.
-* NEVER create files unless they're absolutely necessary for achieving your goal.
-* ALWAYS prefer editing an existing file to creating a new one.
-* NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
-* If you create any temporary new files, scripts, or helper files for iteration, clean up these files by removing them at the end of the task.
-* **Humanizer Filter:** For any text created in documentation, commits, plans, etc., whenever you generate text in natural language for this project, apply the rules of the Humanizer skill before giving me the final result.
-* When you update or modify core context files, also update markdown documentation and memory bank
-* When asked to commit changes, exclude CLAUDE.md and CLAUDE-*.md referenced memory bank system files from any commits. Never delete these files.
+    State your assumptions explicitly. If uncertain, ask.
+    If multiple interpretations exist, present them - don't pick silently.
+    If a simpler approach exists, say so. Push back when warranted.
+    If something is unclear, stop. Name what's confusing. Ask.
 
-<investigate_before_answering>
-Never speculate about code you have not opened. If the user references a specific file, you MUST read the file before answering. Make sure to investigate and read relevant files BEFORE answering questions about the codebase. Never make any claims about code before investigating unless you are certain of the correct answer - give grounded and hallucination-free answers.
-</investigate_before_answering>
+2. Simplicity First
 
-<do_not_act_before_instructions>
-Do not jump into implementatation or changes files unless clearly instructed to make changes. When the user's intent is ambiguous, default to providing information, doing research, and providing recommendations rather than taking action. Only proceed with edits, modifications, or implementations when the user explicitly requests them.
-</do_not_act_before_instructions>
+Minimum code that solves the problem. Nothing speculative.
 
-<use_parallel_tool_calls>
-If you intend to call multiple tools and there are no dependencies between the tool calls, make all of the independent tool calls in parallel. Prioritize calling tools simultaneously whenever the actions can be done in parallel rather than sequentially. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. Maximize use of parallel tool calls where possible to increase speed and efficiency. However, if some tool calls depend on previous calls to inform dependent values like the parameters, do NOT call these tools in parallel and instead call them sequentially. Never use placeholders or guess missing parameters in tool calls.
-</use_parallel_tool_calls>
+    No features beyond what was asked.
+    No abstractions for single-use code.
+    No "flexibility" or "configurability" that wasn't requested.
+    No error handling for impossible scenarios.
+    If you write 200 lines and it could be 50, rewrite it.
+
+Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
+3. Surgical Changes
+
+Touch only what you must. Clean up only your own mess.
+
+When editing existing code:
+
+    Don't "improve" adjacent code, comments, or formatting.
+    Don't refactor things that aren't broken.
+    Match existing style, even if you'd do it differently.
+    If you notice unrelated dead code, mention it - don't delete it.
+
+When your changes create orphans:
+
+    Remove imports/variables/functions that YOUR changes made unused.
+    Don't remove pre-existing dead code unless asked.
+
+The test: Every changed line should trace directly to the user's request.
+4. Goal-Driven Execution
+
+Define success criteria. Loop until verified.
+
+Transform tasks into verifiable goals:
+
+    "Add validation" → "Write tests for invalid inputs, then make them pass"
+    "Fix the bug" → "Write a test that reproduces it, then make it pass"
+    "Refactor X" → "Ensure tests pass before and after"
+
+For multi-step tasks, state a brief plan:
+
+1. [Step] → verify: [check]
+2. [Step] → verify: [check]
+3. [Step] → verify: [check]
+
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
 ## Project Overview
 
