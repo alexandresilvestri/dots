@@ -64,7 +64,7 @@ alias dps="docker ps"
 alias ds="docker ps"
 alias ld="lazydocker"
 alias dce="docker compose exec"
-alias dcr="docker compose app exec bin/rails"
+alias dcr="docker compose exec app bin/rails"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
