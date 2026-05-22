@@ -64,11 +64,10 @@ alias dps="docker ps"
 alias ds="docker ps"
 alias ld="lazydocker"
 alias dce="docker compose exec"
-alias dcr="docker compose exec bin/rails"
+alias dcr="docker compose app exec bin/rails"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
-alias dcr="docker compose exec web bin/rails"
 alias ps1="flatpak run org.duckstation.DuckStation & disown"
 alias ps2="flatpak run net.pcsx2.PCSX2 & disown"
 
