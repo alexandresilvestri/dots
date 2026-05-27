@@ -88,7 +88,6 @@ export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
