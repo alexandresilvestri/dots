@@ -1,3 +1,6 @@
+NEVER ADD COMMENTS. IF YOU FIND AN EXTREMELY NECESSARY SITUATION, ASK ASK BEFORE CREATING
+NEVER USE EMOJIS
+
 1. Think Before Coding
 
 Don't assume. Don't hide confusion. Surface tradeoffs.
