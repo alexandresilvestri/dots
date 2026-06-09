@@ -60,7 +60,7 @@ alias d="docker"
 alias dc="docker compose"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
-alias dps="docker ps"
+alias dvs="docker volume ls"
 alias ds="docker ps"
 alias ld="lazydocker"
 alias dce="docker compose exec"
@@ -87,6 +87,7 @@ export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
+export LANG=en_US.UTF-8
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
