@@ -39,6 +39,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source <(fzf --zsh)
 
 # Aliases
 
@@ -70,6 +71,7 @@ alias cat="bat --paging=never"
 alias ls="exa --icons"
 alias ps1="flatpak run org.duckstation.DuckStation & disown"
 alias ps2="flatpak run net.pcsx2.PCSX2 & disown"
+alias b="z ~"
 
 # ------- #
 
