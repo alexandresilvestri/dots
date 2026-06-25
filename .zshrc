@@ -68,6 +68,7 @@ alias ld="lazydocker"
 alias dce="docker compose exec"
 alias dcr="docker compose exec app bin/rails"
 # -- Others --
+alias codes="code backend && code frontend"
 alias cat="bat --paging=never"
 alias ls="exa --icons"
 alias ps1="flatpak run org.duckstation.DuckStation & disown"
