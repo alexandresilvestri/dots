@@ -57,6 +57,7 @@ alias gph="git push"
 alias gpl="git pull"
 alias gr="git rebase"
 alias lg="lazygit"
+alias gl="git log --graph --oneline --decorate"
 # -- Docker --
 alias d="docker"
 alias dc="docker compose"
