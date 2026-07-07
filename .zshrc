@@ -98,7 +98,7 @@ export LANG=en_US.UTF-8
 (( ! ${+functions[p10k]} )) || p10k finalize
 
 # Claude multi-account:
-claude-switch() {
+switch() {
   case "$1" in
     conferir|personal)
       ln -sfn "$HOME/.claude-$1"      "$HOME/.claude"
