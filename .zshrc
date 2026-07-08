@@ -96,3 +96,14 @@ export LANG=en_US.UTF-8
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
+
+# Claude multi-account:
+switch() {
+  case "$1" in
+    conferir|personal)
+      ln -sfn "$HOME/.claude-$1"      "$HOME/.claude"
+      ln -sfn "$HOME/.claude-$1.json" "$HOME/.claude.json"
+      echo "claude -> .claude-$1";;
+    *) echo "usage: switch conferir|personal"; echo -n "current: "; readlink "$HOME/.claude";;
+  esac
+}
