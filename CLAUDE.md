@@ -1,5 +1,4 @@
-NEVER ADD COMMENTS. IF YOU FIND AN EXTREMELY NECESSARY SITUATION, ASK ASK BEFORE CREATING
-NEVER USE EMOJIS
+Always use grill-me skill during the tasks to help me keep the context of what is being implemented
 
 1. Think Before Coding
 
