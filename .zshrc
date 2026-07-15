@@ -68,7 +68,7 @@ alias ds="docker ps"
 alias ld="lazydocker"
 alias dce="docker compose exec"
 alias dcr="docker compose exec app bin/rails"
-alias docker-stop="docker stop $(docker ps -q) && docker rm -v $(docker ps -aq)"
+alias docker-stop="docker stop $(docker ps -a -q)"
 # -- Others --
 alias codes="code backend && code frontend"
 alias cat="bat --paging=never"
