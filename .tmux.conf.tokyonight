@@ -37,6 +37,9 @@ bind c popup -E -w 90% -h 90% -d "#{pane_current_path}" "claude"
 bind | split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 
+# New window
+bind t new-window -c "#{pane_current_path}"
+
 # Set history limit
 set -g history-limit 10000
 
