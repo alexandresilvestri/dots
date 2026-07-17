@@ -1,0 +1,13 @@
+#!/bin/bash
+# Kill all tmux sessions, windows, and panes except the one this runs in.
+# Run from outside tmux: kills the whole server.
+if [ -z "$TMUX" ]; then
+  tmux kill-server 2>/dev/null
+  exit 0
+fi
+current=$(tmux display-message -p '#{session_name}:#{window_index}')
+for s in $(tmux list-sessions -F '#{session_name}'); do
+  [ "$s" != "${current%%:*}" ] && tmux kill-session -t "$s"
+done
+tmux kill-window -a -t "$current" 2>/dev/null
+tmux kill-pane -a -t "$TMUX_PANE" 2>/dev/null
