@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# hyprpm plugins must be rebuilt after every Hyprland update, otherwise they
+# fail to load at boot and bindings.conf shows "Invalid dispatcher" errors
+# for hyprexpo. Detect stale plugin headers and rebuild in a terminal
+# (hyprpm needs the sudo password to persist the rebuild).
+if hyprpm reload 2>&1 | grep -q 'headers are not up-to-date'; then
+  notify-send "Hyprland was updated" "Rebuilding hyprpm plugins — enter your password in the terminal"
+  xdg-terminal-exec bash -c 'hyprpm update && hyprctl reload || read -rp "hyprpm update failed — press enter to close"'
+else
+  # Plugins loaded fine; re-parse config to clear the startup error banner.
+  hyprctl reload
+fi
