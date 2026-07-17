@@ -1,0 +1,127 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  min-width: 0;
+  font-family: 'MesloLGS Nerd Font';
+  font-size: 12px;
+}
+
+window#waybar {
+  padding: 0;
+}
+
+.modules-left {
+  margin-top: 4px;
+}
+
+.modules-right {
+  margin-bottom: 4px;
+}
+
+#custom-omarchy,
+#workspaces,
+#clock,
+#cpu,
+#pulseaudio,
+#network,
+#bluetooth,
+#custom-update,
+#custom-expand-icon,
+#custom-voxtype,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#tray {
+  padding: 4px 0;
+  margin: 0;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 4px 0;
+  margin: 1px 0;
+  min-height: 16px;
+  min-width: 16px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#custom-omarchy {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+#clock {
+  font-size: 11px;
+  padding: 6px 0;
+}
+
+#cpu,
+#pulseaudio,
+#network,
+#bluetooth {
+  padding: 5px 0;
+}
+
+#custom-expand-icon {
+  padding: 4px 0;
+}
+
+#tray {
+  padding: 4px 0;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  font-size: 10px;
+  padding: 3px 0;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
+
+#custom-voxtype {
+  padding: 4px 0;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-weather {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+#custom-weather.unavailable {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
