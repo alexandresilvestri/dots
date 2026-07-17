@@ -1,0 +1,6 @@
+#!/bin/bash
+# Kill all tmux sessions and all kitty windows.
+# WARNING: destroys every tmux window and any process running inside,
+# including the terminal you run it from.
+tmux kill-server 2>/dev/null
+pkill -x kitty
