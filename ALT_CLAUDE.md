@@ -1,3 +1,5 @@
+NEVER ADD COMMENTS. INSTEAD OF ADD COMMENTS, CREATE SEMANTIC CODE
+
 1. Think Before Coding
 
 Don't assume. Don't hide confusion. Surface tradeoffs.
