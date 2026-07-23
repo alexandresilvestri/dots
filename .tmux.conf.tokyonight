@@ -77,3 +77,4 @@ set -g @tmux2k-right-plugins "cpu ram time"
 
 # Initialize plugins
 run '~/.tmux/plugins/tpm/tpm'
+
