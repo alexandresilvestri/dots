@@ -109,3 +109,6 @@ claude-switch() {
     *) echo "usage: switch conferir|personal"; echo -n "current: "; readlink "$HOME/.claude";;
   esac
 }
+
+# bun completions
+[ -s "/home/alexandresilvestri/.bun/_bun" ] && source "/home/alexandresilvestri/.bun/_bun"
