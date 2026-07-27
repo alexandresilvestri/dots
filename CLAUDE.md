@@ -1,4 +1,4 @@
-Always use grill-me skill during the tasks to help me keep the context of what is being implemented
+Never add Co-authored: Claude message on commits.
 
 1. Think Before Coding
 
