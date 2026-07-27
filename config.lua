@@ -21,3 +21,13 @@ lvim.builtin.gitsigns.opts.current_line_blame_opts = {
 }
 lvim.builtin.gitsigns.opts.current_line_blame_formatter =
   "  <author>, <author_time:%Y-%m-%d> · <summary>"
+
+local predicates_kept_from_nvim_builtin = { ["has-ancestor?"] = true, ["has-parent?"] = true }
+local ts_query = require "vim.treesitter.query"
+local original_add_predicate = ts_query.add_predicate
+ts_query.add_predicate = function(name, handler, opts)
+  if predicates_kept_from_nvim_builtin[name] then
+    return
+  end
+  return original_add_predicate(name, handler, opts)
+end
