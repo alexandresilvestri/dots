@@ -13,13 +13,13 @@
     }
   },
   "display": {
-    "separator": "  ",
+    "separator": " ",
     "key": {
-      "width": 12
+      "width": 10
     },
     "color": {
-      "keys": "yellow",
-      "title": "green"
+      "keys": "cyan",
+      "title": "cyan"
     }
   },
   "modules": [
@@ -28,32 +28,14 @@
       "format": "{user-name}@{host-name}"
     },
     { "type": "os", "key": "os" },
-    { "type": "kernel", "key": "kernel" },
-    { "type": "initsystem", "key": "init" },
-    { "type": "bootmgr", "key": "bootmgr" },
-    { "type": "host", "key": "host" },
-    { "type": "board", "key": "board" },
-    { "type": "uptime", "key": "uptime" },
+    { "type": "wm", "key": "wm" },
     { "type": "packages", "key": "pkgs" },
     { "type": "shell", "key": "shell" },
+    { "type": "terminal", "key": "term" },
     { "type": "editor", "key": "editor" },
     { "type": "de", "key": "de" },
-    { "type": "wm", "key": "wm" },
-    { "type": "wmtheme", "key": "wmtheme" },
-    { "type": "theme", "key": "theme" },
-    { "type": "icons", "key": "icons" },
-    { "type": "font", "key": "font" },
-    { "type": "cursor", "key": "cursor" },
-    { "type": "terminal", "key": "term" },
-    { "type": "terminalfont", "key": "termfont" },
     { "type": "cpu", "key": "cpu", "showPeCoreCount": true },
-    { "type": "gpu", "key": "gpu", "detectionMethod": "pci" },
-    { "type": "memory", "key": "memory" },
-    { "type": "swap", "key": "swap" },
-    { "type": "disk", "key": "disk" },
-    { "type": "localip", "key": "local ip" },
-    { "type": "users", "key": "users" },
-    "break",
-    "colors"
+    { "type": "gpu", "key": "gpu", "detectionMethod": "pci", "driverSpecific": true, "format": "{name} {dedicated-total} VRAM" },
+    { "type": "memory", "key": "memory" }
   ]
 }
