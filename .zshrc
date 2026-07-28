@@ -86,9 +86,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# Mise for Ruby
-eval "$(/usr/bin/mise activate)"
-
 # ASDF
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
