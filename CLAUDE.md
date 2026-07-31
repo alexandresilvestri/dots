@@ -1,4 +1,5 @@
 Never add Co-authored: Claude message on commits.
+Never add comments or docstrings
 
 1. Think Before Coding
 
