@@ -1,0 +1,36 @@
+[user]
+	name = Alexandre Silvestri
+	email = alexandre.silvestri@jc2sec.com.br
+[init]
+	defaultBranch = main
+[push]
+	default = simple
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	algorithm = histogram
+[rerere]
+	enabled = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gitlab.com"]
+	helper = 
+	helper = !/usr/bin/glab auth git-credential
+[core]
+	editor = lvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true 
+  dark = true
+[merge]
+  conflictStyle = zdiff3
+
+
