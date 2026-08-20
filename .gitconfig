@@ -11,6 +11,7 @@
 	prune = true
 [diff]
 	algorithm = histogram
+  colorMoved = default
 [rerere]
 	enabled = true
 [credential "https://github.com"]
@@ -32,5 +33,4 @@
   dark = true
 [merge]
   conflictStyle = zdiff3
-
 
