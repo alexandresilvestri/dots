@@ -3,6 +3,7 @@
 
 smart_completion = True
 auto_suggest = True
+pager = less -SRXF
 # Display the completions in several columns. (More completions will be
 # visible.)
 wider_completion_menu = False
