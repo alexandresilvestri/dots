@@ -70,7 +70,8 @@ alias ds="docker ps"
 alias ld="lazydocker"
 alias dce="docker compose exec"
 alias dcr="docker compose exec app bin/rails"
-alias dsr="docker stop $(docker ps -a -q) && docker rm $(docker ps -aq)"
+alias docker-s='docker kill $(docker ps -q)'
+alias docker-r='docker rm $(docker ps -a -q)'
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
