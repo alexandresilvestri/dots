@@ -96,3 +96,7 @@ export LANG=en_US.UTF-8
 
 # bun completions
 [ -s "/home/alexandresilvestri/.bun/_bun" ] && source "/home/alexandresilvestri/.bun/_bun"
+
+# >>> railway initialize >>>
+source "$HOME/.railway/env"
+# <<< railway initialize <<<
