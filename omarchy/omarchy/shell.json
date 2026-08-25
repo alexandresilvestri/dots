@@ -10,8 +10,12 @@
     "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [
-        { "id": "omarchy.menu" },
-        { "id": "omarchy.workspaces" }
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "omarchy.workspaces"
+        }
       ],
       "center": [
         {
@@ -20,14 +24,26 @@
           "formatAlt": "d MMMM 'W'ww yyyy",
           "verticalFormat": "ddd\nHH\nmm"
         },
-        { "id": "omarchy.system-update" },
-        { "id": "omarchy.indicators" }
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "omarchy.indicators"
+        }
       ],
       "right": [
-        { "id": "omarchy.tray" },
-        { "id": "omarchy.bluetooth" },
-        { "id": "omarchy.network" },
-        { "id": "omarchy.audio" },
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
         {
           "id": "cpu",
           "type": "command",
