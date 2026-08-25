@@ -1,0 +1,10 @@
+hl.unbind("SUPER + T")
+hl.unbind("SUPER + S")
+hl.unbind("SUPER + F")
+hl.unbind("SUPER + W")
+
+o.bind("SUPER + T", "Tmux", o.launch([[xdg-terminal-exec --dir="$(omarchy-cmd-terminal-cwd)" bash -c "tmux attach || tmux new"]]))
+o.bind("SUPER + S", "Music", o.launch_sole("spotify", "spotify-launcher"))
+o.bind("SUPER + E", "File manager", o.launch("nautilus --new-window"))
+o.bind("SUPER + F", "Firefox", o.launch("firefox"))
+o.bind("SUPER + W", "Workspace overview", "hyprctl dispatch hyprexpo:expo toggle")
