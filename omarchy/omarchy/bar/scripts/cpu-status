@@ -1,0 +1,22 @@
+#!/bin/bash
+
+read -r _ a b c prev_idle rest </proc/stat
+prev_total=$((a + b + c + prev_idle))
+for v in $rest; do prev_total=$((prev_total + v)); done
+
+sleep 0.2
+
+read -r _ a b c idle rest </proc/stat
+total=$((a + b + c + idle))
+for v in $rest; do total=$((total + v)); done
+
+delta_total=$((total - prev_total))
+delta_idle=$((idle - prev_idle))
+
+if ((delta_total > 0)); then
+  usage=$(((100 * (delta_total - delta_idle) + delta_total / 2) / delta_total))
+else
+  usage=0
+fi
+
+printf '{"text":"\U000F035B","tooltip":"CPU: %d%%"}\n' "$usage"
