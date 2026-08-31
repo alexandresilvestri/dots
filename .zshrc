@@ -47,6 +47,7 @@ source <(fzf --zsh)
 alias arch="sudo pacman"
 alias update="sudo pacman -Syyuu && yay -Syyuu"
 alias ff="fastfetch"
+alias inspect="stat . && du -sh ."
 # --- Git Shortcuts ---
 alias gs="git status"
 alias ga="git add"
