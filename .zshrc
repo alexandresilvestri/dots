@@ -61,6 +61,7 @@ alias gss="git show --stat"
 alias gr="git rebase"
 alias lg="lazygit"
 alias gl="git log --graph --oneline --decorate"
+alias gcr="git clone --filter=blob:none --sparse"
 # -- Docker --
 alias d="docker"
 alias dc="docker compose"
