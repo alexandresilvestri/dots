@@ -80,6 +80,26 @@ alias ls="exa --icons"
 
 # ------- #
 
+alias() {
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    awk '/^# Aliases/{f=1; next} /^# ------- #/{f=0} f && NF {
+      if ($0 ~ /^#/) {
+        gsub(/^[-# ]+|[-# ]+$/, "")
+        printf "\n\033[1;34m%s\033[0m\n", $0
+      } else if ($0 ~ /^alias /) {
+        sub(/^alias /, "")
+        i = index($0, "=")
+        name = substr($0, 1, i - 1)
+        cmd = substr($0, i + 1)
+        gsub(/^["'\'']|["'\'']$/, "", cmd)
+        printf "  \033[32m%-12s\033[0m %s\n", name, cmd
+      }
+    }' ~/.zshrc
+    return
+  fi
+  builtin alias "$@"
+}
+
 # Cargo (Rust)
 export PATH="$HOME/.cargo/bin:$PATH"
 
