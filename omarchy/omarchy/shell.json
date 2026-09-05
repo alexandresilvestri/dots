@@ -6,7 +6,7 @@
   },
   "bar": {
     "position": "left",
-    "transparent": true,
+    "transparent": false,
     "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [
@@ -34,6 +34,9 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.power"
         },
         {
           "id": "omarchy.bluetooth"
