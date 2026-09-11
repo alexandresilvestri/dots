@@ -1,3 +1,4 @@
+Always use caveman plugin for every response
 Never add Co-authored: Claude message on commits.
 Never add comments or docstrings
 
