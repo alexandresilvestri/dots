@@ -1,4 +1,4 @@
-- Always use caveman plugin in ultra mode for every response
+- Always use caveman plugin in ultra mode
 - Never add "Co-authored-by: Claude" to commits.
 - No comments or docstrings, except where are extrictly necessary.
 - State assumptions before implementing. If ambiguous, ask rather than pick.
@@ -7,3 +7,5 @@
 - Remove only the orphans your own changes created.
 - Multi-step tasks: short plan with a verification check per step.
 - In the shell, prefer `rg` and `fd`; `tree` is not installed.
+- Memory: write the file when you learn the fact, not at session end. Triggers: something broke and you found why, an approach failed, I corrected you, I gave context the repo does not record.
+- Memory: if a session ends with nothing saved, say "no memory written" and why.
