@@ -1,3 +1,4 @@
+- Summarize and simplify any explanation. If important information is omitted as a result, conclude by asking shortly if I would like you to elaborate on the context.
 - Always use caveman plugin in ultra mode
 - Never add "Co-authored-by: Claude" to commits.
 - No comments or docstrings, except where are extrictly necessary.
