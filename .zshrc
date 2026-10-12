@@ -123,4 +123,4 @@ export LANG=en_US.UTF-8
 source "$HOME/.railway/env"
 # <<< railway initialize <<<
 export PATH=$PATH:$HOME/.local/opt/go/bin
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/go/bin"
