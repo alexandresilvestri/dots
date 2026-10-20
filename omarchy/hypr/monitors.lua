@@ -6,7 +6,15 @@ local omarchy_monitor_scale = "auto"
 
 hl.env("GDK_SCALE", tostring(omarchy_gdk_scale))
 hl.monitor({ output = "", mode = "preferred", position = "auto", scale = omarchy_monitor_scale })
-hl.monitor({ output = "HDMI-A-1", disabled = true })
+hl.monitor({ output = "HDMI-A-1", mode = "1920x1080@60", position = "auto-down", scale = omarchy_monitor_scale })
+
+for ws = 1, 5 do
+  hl.workspace_rule({ workspace = tostring(ws), monitor = "DP-1", default = ws == 1 })
+end
+
+for ws = 6, 10 do
+  hl.workspace_rule({ workspace = tostring(ws), monitor = "HDMI-A-1", default = ws == 6 })
+end
 
 -- Configure a specific monitor.
 -- hl.monitor({ output = "DP-2", mode = "2560x1440@144", position = "0x0", scale = 1 })
