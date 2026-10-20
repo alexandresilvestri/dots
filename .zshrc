@@ -125,3 +125,7 @@ export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH=$PATH:$HOME/.kubescape/bin
+
+# waydroid
+alias waydroid="PATH=/usr/bin:\$PATH waydroid"
+
