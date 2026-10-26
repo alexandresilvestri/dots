@@ -3,7 +3,7 @@
 - Never add "Co-authored-by: Claude" to commits.
 - No comments or docstrings on migration and seed files.
 - No comments or docstrings, except where are extrictly necessary.
-- After completing a task, run /simplify, then recommend a oneline commit message. 
+- After completing a task, run /simplify (report-only where the project forbids direct edits), then recommend a oneline commit message. 
 - State assumptions before implementing. If ambiguous, ask rather than pick.
 - Minimum code. No abstractions for single-use, no unrequested configurability.
 - Change only what the task requires. Don't refactor adjacent code. Match existing style.
