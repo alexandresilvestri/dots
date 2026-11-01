@@ -26,6 +26,11 @@ lvim.builtin.gitsigns.opts.current_line_blame_opts = {
 lvim.builtin.gitsigns.opts.current_line_blame_formatter =
   "  <author>, <author_time:%Y-%m-%d> · <summary>"
 
+vim.diagnostic.config({
+  virtual_text = { current_line = false },
+  virtual_lines = { current_line = true },
+})
+
 local predicates_kept_from_nvim_builtin = { ["has-ancestor?"] = true, ["has-parent?"] = true }
 local ts_query = require "vim.treesitter.query"
 local original_add_predicate = ts_query.add_predicate
