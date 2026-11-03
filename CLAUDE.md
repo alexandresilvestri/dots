@@ -1,8 +1,7 @@
 - Summarize and simplify any explanation. If important information is omitted as a result, conclude by asking shortly if I would like you to elaborate on the context.
 - Never add "Co-authored-by: Claude" to commits.
-- No comments or docstrings on migration and seed files.
-- No comments or docstrings, except where are extrictly necessary.
-- After completing a task, run /simplify (report-only where the project forbids direct edits), then recommend a oneline commit message. 
+- No comments or docstrings, except where are extrictly necessary, and if is this case, get permission to add the comment.
+- After completing a task, run /simplify (report-only where the project forbids direct edits). 
 - State assumptions before implementing. If ambiguous, ask rather than pick.
 - Minimum code. No abstractions for single-use, no unrequested configurability.
 - Change only what the task requires. Don't refactor adjacent code. Match existing style.
