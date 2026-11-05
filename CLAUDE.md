@@ -1,7 +1,6 @@
-- Summarize and simplify any explanation. If important information is omitted as a result, conclude by asking shortly if I would like you to elaborate on the context.
-- Never add "Co-authored-by: Claude" to commits.
+- Summarize and simplify any explanation.
 - No comments or docstrings, except where are extrictly necessary, and if is this case, get permission to add the comment.
-- After completing a task, run /simplify (report-only where the project forbids direct edits). 
+- After completing a task, run /simplify. 
 - State assumptions before implementing. If ambiguous, ask rather than pick.
 - Minimum code. No abstractions for single-use, no unrequested configurability.
 - Change only what the task requires. Don't refactor adjacent code. Match existing style.
@@ -10,3 +9,5 @@
 - In the shell, prefer `rg` and `fd`; `tree` is not installed.
 - Memory: write the file when you learn the fact, not at session end. Triggers: something broke and you found why, an approach failed, I corrected you, I gave context the repo does not record.
 - Memory: if a session ends with nothing saved, say "no memory written" and why.
+- Never add "Co-authored-by: Claude" to commits.
+
