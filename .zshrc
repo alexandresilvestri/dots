@@ -129,3 +129,6 @@ export PATH=$PATH:$HOME/.kubescape/bin
 # waydroid
 alias waydroid="PATH=/usr/bin:\$PATH waydroid"
 
+
+# Added by the Hunk installer (https://hunk.dev)
+export PATH='/home/alexandresilvestri/.hunk/bin':"$PATH"
