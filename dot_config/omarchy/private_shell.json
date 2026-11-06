@@ -1,0 +1,87 @@
+{
+  "bar": {
+    "layout": {
+      "center": [
+        {
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "verticalFormat": "HH\n—\nmm"
+        }
+      ],
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "omarchy.workspaces"
+        }
+      ],
+      "right": [
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "exec": "~/.config/omarchy/bar/scripts/cpu-status",
+          "id": "cpu",
+          "interval": 5,
+          "onClick": "omarchy-launch-or-focus-tui btop",
+          "type": "command"
+        }
+      ],
+      "centerBegin": [
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "centerEnd": [
+        {
+          "id": "omarchy.elsewhen",
+          "cities": [
+            {
+              "name": "Sao Paulo",
+              "zone": "America/Sao_Paulo"
+            },
+            {
+              "name": "London",
+              "zone": "Europe/London"
+            },
+            {
+              "name": "Dubai",
+              "zone": "Asia/Dubai"
+            },
+            {
+              "name": "Tokyo",
+              "zone": "Asia/Tokyo"
+            },
+            {
+              "name": "Los Angeles",
+              "zone": "America/Los_Angeles"
+            }
+          ]
+        },
+        {
+          "id": "omarchy.indicators"
+        }
+      ],
+      "tray": []
+    },
+    "position": "left",
+    "transparent": false
+  },
+  "idle": {
+    "lock": 2000000,
+    "screensaver": 2000000
+  },
+  "plugins": [],
+  "version": 1
+}
