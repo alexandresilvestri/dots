@@ -1,20 +1,3 @@
-{{ if eq .chezmoi.hostname "omarchy-notebook" -}}
-dofile((os.getenv("OMARCHY_PATH") or "/usr/share/omarchy") .. "/default/hypr/bootstrap.lua")
-
-require("default.hypr.omarchy")
-
-require("hypr.monitors")
-require("hypr.input")
-require("hypr.bindings")
-require("hypr.looknfeel")
-require("hypr.autostart")
-
-require("hypr.input-note")
-require("hypr.bindings-note")
-require("hypr.looknfeel-note")
-
-require("default.hypr.toggles")
-{{ else -}}
 -- Learn how to configure Hyprland: https://wiki.hypr.land/Configuring/Start/
 
 -- Omarchy's bootstrap keeps path setup out of this user config.
@@ -44,4 +27,3 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
-{{ end -}}

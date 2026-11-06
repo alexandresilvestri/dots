@@ -1,17 +1,10 @@
-{{ if eq .chezmoi.hostname "omarchy-notebook" -}}
-hl.unbind("SUPER + S")
-hl.unbind("SUPER + W")
-
-o.bind("SUPER + S", "Music", o.launch_sole("spotify", "spotify-launcher"))
-o.bind("SUPER + W", "Workspace overview", "hyprctl dispatch hyprexpo:expo toggle")
-{{ else -}}
 hl.unbind("SUPER + T")
 hl.unbind("SUPER + S")
 hl.unbind("SUPER + SHIFT + S")
 hl.unbind("SUPER + F")
 
 o.bind("SUPER + T", "Tmux", o.launch([[xdg-terminal-exec --dir="$(omarchy-cmd-terminal-cwd)" bash -c "tmux attach || tmux new"]]))
-o.bind("SUPER + S", "Music", o.launch_sole("spotify", "spotify"))
+o.bind("SUPER + S", "Music", o.launch_sole("spotify", "{{ if .notebook }}spotify-launcher{{ else }}spotify{{ end }}"))
 o.bind("SUPER + E", "File manager", o.launch("nautilus --new-window"))
 o.bind("SUPER + F", "Firefox", o.launch("firefox"))
 o.bind("ALT + F4", "Close window", hl.dsp.window.close())
@@ -21,4 +14,8 @@ hl.unbind("CTRL + ALT + DELETE")
 
 hl.unbind("ALT + TAB")
 o.bind("ALT + TAB", "Next workspace", hl.dsp.focus({ workspace = "e+1" }))
+
+{{ if .notebook -}}
+hl.unbind("SUPER + W")
+o.bind("SUPER + W", "Workspace overview", "hyprctl dispatch hyprexpo:expo toggle")
 {{ end -}}
