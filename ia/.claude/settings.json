@@ -1,0 +1,113 @@
+{
+  "cleanupPeriodDays": 14,
+  "env": {
+    "PLANNOTATOR_BROWSER": "firefox",
+    "CAVEMAN_DEFAULT_MODE": "ultra"
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus",
+  "skillOverrides": {
+    "sentry-cli": "off",
+    "anthropic-skills:docx": "off",
+    "anthropic-skills:google-workspace": "off",
+    "anthropic-skills:import-memory": "off",
+    "anthropic-skills:mcp-builder": "off",
+    "anthropic-skills:pdf": "off",
+    "anthropic-skills:pptx": "off",
+    "anthropic-skills:skill-creator": "off",
+    "anthropic-skills:web-artifacts-builder": "off",
+    "anthropic-skills:xlsx": "off",
+    "chrome-devtools-mcp:a11y-debugging": "off",
+    "chrome-devtools-mcp:chrome-devtools": "off",
+    "chrome-devtools-mcp:chrome-devtools-cli": "off",
+    "chrome-devtools-mcp:cookie-debugging": "off",
+    "chrome-devtools-mcp:debug-optimize-lcp": "off",
+    "chrome-devtools-mcp:memory-leak-debugging": "off",
+    "chrome-devtools-mcp:troubleshooting": "off",
+    "sentry:sentry-create-alert": "off",
+    "sentry:sentry-debug-issue": "off",
+    "sentry:sentry-fix-stack-traces": "off",
+    "sentry:sentry-instrument": "off",
+    "sentry:sentry-otel-exporter-setup": "off",
+    "sentry:sentry-setup-releases": "off",
+    "sentry:sentry-snapshots-cocoa": "off",
+    "caveman:caveman-commit": "off",
+    "caveman:caveman-discover": "off",
+    "caveman:caveman-evidence-review": "off",
+    "caveman:caveman-explore": "off",
+    "caveman:caveman-learn": "off",
+    "caveman:caveman-manage": "off",
+    "caveman:caveman-optimize": "off",
+    "caveman:caveman-review": "off",
+    "caveman:caveman-setup": "off",
+    "caveman:investigate-first": "off",
+    "caveman:lean-build": "off",
+    "caveman:migration": "off",
+    "caveman:safe-refactor": "off",
+    "caveman:surgical-patch": "off",
+    "caveman:verify-and-stop": "off"
+  },
+  "worktree": {
+    "baseRef": "fresh"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "caveman@caveman": true,
+    "frontend-design@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "plannotator@plannotator": true,
+    "superpowers@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true,
+    "design@synced": false,
+    "engineering@synced": false,
+    "data@synced": false,
+    "productivity@synced": false,
+    "cowork-plugin-management@synced": false,
+    "pdf-viewer@synced": false,
+    "github@synced": false,
+    "postman@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      },
+      "autoUpdate": true
+    },
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
+      }
+    }
+  },
+  "feedbackDrafts": "notify",
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-fable-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-opus-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "tui": "fullscreen",
+  "theme": "dark-ansi",
+  "editorMode": "vim",
+  "verbose": false,
+  "preferredNotifChannel": "kitty",
+  "switchModelsOnFlag": false,
+  "remoteControlAtStartup": false,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
+}
