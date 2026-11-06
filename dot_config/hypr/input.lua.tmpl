@@ -1,3 +1,15 @@
+{{ if eq .chezmoi.hostname "omarchy-notebook" -}}
+hl.config({
+  input = {
+    kb_layout = "br",
+    kb_variant = "abnt2",
+
+    touchpad = {
+      clickfinger_behavior = false,
+    },
+  },
+})
+{{ else -}}
 hl.config({
   input = {
     kb_layout = "us",
@@ -14,3 +26,4 @@ hl.config({
 
 o.window("kitty", { scroll_touchpad = 1.5 })
 o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
+{{ end -}}

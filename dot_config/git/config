@@ -11,6 +11,7 @@
 	rebase = true 			 # Rebase (instead of merge) on pull
 [push]
 	autoSetupRemote = true   # Automatically set upstream branch on push
+	default = simple
 [diff]
 	algorithm = histogram    # Clearer diffs on moved/edited lines
 	colorMoved = plain       # Highlight moved blocks in diffs
@@ -35,3 +36,18 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[fetch]
+	prune = true
+[credential "https://gitlab.com"]
+	helper = 
+	helper = !/usr/bin/glab auth git-credential
+[core]
+	editor = lvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+[merge]
+	conflictStyle = zdiff3
