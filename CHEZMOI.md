@@ -47,7 +47,7 @@ Depois, para atualizar: `chezmoi update` (faz `git pull` + `apply`).
 ## Templates
 
 - `dot_config/hypr/bindings.lua.tmpl` gera `~/.config/hypr/bindings.lua`.
-- `{{ if eq .chezmoi.hostname "omarchy-notebook" }}` escolhe o conteúdo por máquina.
+- `{{ if .notebook }}` escolhe o conteúdo por máquina.
 - Testar um template: `chezmoi execute-template < arquivo.tmpl`.
 - Ver variáveis disponíveis: `chezmoi data`.
 - Arquivos do source que não devem ir para o `~` ficam em `.chezmoiignore`.
