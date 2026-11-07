@@ -1,2 +1,11 @@
 CLAUDE.md
 CHEZMOI.md
+{{ if .work }}
+.config/autostart
+.config/fontconfig
+.config/hypr
+.config/kitty
+.config/omarchy
+.config/uwsm
+.config/xdg-terminals.list
+{{ end }}
