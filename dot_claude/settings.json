@@ -49,6 +49,78 @@
     "caveman:surgical-patch": "off",
     "caveman:verify-and-stop": "off"
   },
+  "deniedMcpServers": [
+    {
+      "serverName": "claude.ai Asana"
+    },
+    {
+      "serverName": "claude.ai Atlassian Rovo"
+    },
+    {
+      "serverName": "claude.ai Bitsight"
+    },
+    {
+      "serverName": "claude.ai Box"
+    },
+    {
+      "serverName": "claude.ai Canva"
+    },
+    {
+      "serverName": "claude.ai Figma"
+    },
+    {
+      "serverName": "claude.ai Gmail"
+    },
+    {
+      "serverName": "claude.ai Google Calendar"
+    },
+    {
+      "serverName": "claude.ai Google Docs"
+    },
+    {
+      "serverName": "claude.ai Google Drive"
+    },
+    {
+      "serverName": "claude.ai Google Sheets"
+    },
+    {
+      "serverName": "claude.ai Google Slides"
+    },
+    {
+      "serverName": "claude.ai HubSpot"
+    },
+    {
+      "serverName": "claude.ai Intercom"
+    },
+    {
+      "serverName": "claude.ai Linear"
+    },
+    {
+      "serverName": "claude.ai Microsoft 365"
+    },
+    {
+      "serverName": "claude.ai Microsoft Learn"
+    },
+    {
+      "serverName": "claude.ai Slack"
+    },
+    {
+      "serverName": "claude.ai monday.com"
+    }
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/block-claude-coauthor.sh"
+          }
+        ]
+      }
+    ]
+  },
   "worktree": {
     "baseRef": "fresh"
   },
@@ -62,8 +134,8 @@
     "frontend-design@claude-plugins-official": true,
     "chrome-devtools-mcp@claude-plugins-official": true,
     "plannotator@plannotator": true,
-    "superpowers@claude-plugins-official": true,
-    "sentry@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": false,
+    "sentry@claude-plugins-official": false,
     "design@synced": false,
     "engineering@synced": false,
     "data@synced": false,
@@ -71,7 +143,8 @@
     "cowork-plugin-management@synced": false,
     "pdf-viewer@synced": false,
     "github@synced": false,
-    "postman@claude-plugins-official": true
+    "postman@claude-plugins-official": false,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
