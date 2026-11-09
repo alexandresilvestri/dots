@@ -52,20 +52,23 @@
               "zone": "America/Sao_Paulo"
             },
             {
+              "name": "New York",
+              "zone": "America/New_York"
+            },
+            {
               "name": "London",
               "zone": "Europe/London"
             },
             {
-              "name": "Dubai",
-              "zone": "Asia/Dubai"
+              "name": "Poland",
+              "zone": "Europe/Warsaw",
+              "lat": 52,
+              "lon": 20,
+              "region": "PL"
             },
             {
               "name": "Tokyo",
               "zone": "Asia/Tokyo"
-            },
-            {
-              "name": "Los Angeles",
-              "zone": "America/Los_Angeles"
             }
           ]
         },
