@@ -113,6 +113,7 @@ export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export LANG=en_US.UTF-8
+[[ -d ~/.local/share/omarchy ]] && export OMARCHY_ALLOW_DIRECT_PACMAN=1
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
 (( ! ${+functions[p10k]} )) || p10k finalize
