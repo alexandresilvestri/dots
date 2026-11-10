@@ -49,7 +49,7 @@ alias update="sudo pacman -Syyuu && yay -Syyuu"
 alias ff="fastfetch"
 alias inspect="stat . && du -sh ."
 # --- Git Shortcuts ---
-alias gs="git status"
+alias gs="git status --short"
 alias ga="git add"
 alias gc="git commit"
 alias gcn="git commit -n"
