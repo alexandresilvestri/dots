@@ -48,6 +48,8 @@ Depois, para atualizar: `chezmoi update` (faz `git pull` + `apply`).
 
 - `dot_config/hypr/bindings.lua.tmpl` gera `~/.config/hypr/bindings.lua`.
 - `{{ if .notebook }}` escolhe o conteúdo por máquina.
+- `{{ if .wsl }}` separa Windows + WSL2 de Omarchy (ex.: `dot_claude/hooks/executable_notify-desktop.sh.tmpl`).
+- Mudou `.chezmoi.toml.tmpl`? Rode `chezmoi init` em cada máquina para regenerar as variáveis.
 - Testar um template: `chezmoi execute-template < arquivo.tmpl`.
 - Ver variáveis disponíveis: `chezmoi data`.
 - Arquivos do source que não devem ir para o `~` ficam em `.chezmoiignore`.

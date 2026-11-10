@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-command -v powershell.exe >/dev/null || exit 0
 input=$(cat)
 cwd=$(jq -r '.cwd' <<<"$input")
 CN_TITLE="Claude Code — ${cwd##*/}"
 CN_BODY=$(jq -r '.message // "Task finished"' <<<"$input")
+{{ if .wsl -}}
+command -v powershell.exe >/dev/null || exit 0
 export CN_TITLE CN_BODY WSLENV=CN_TITLE:CN_BODY
 
 ps='
@@ -15,3 +16,7 @@ $n = $t.GetElementsByTagName("text")
 $m::CreateToastNotifier("{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\WindowsPowerShell\v1.0\powershell.exe").Show([Windows.UI.Notifications.ToastNotification]::new($t))
 '
 setsid -f powershell.exe -NoProfile -NonInteractive -Command "$ps" >/dev/null 2>&1
+{{ else -}}
+command -v omarchy-notification-send >/dev/null || exit 0
+setsid -f omarchy-notification-send "$CN_TITLE" "$CN_BODY" >/dev/null 2>&1
+{{ end -}}
