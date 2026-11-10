@@ -120,27 +120,6 @@
         ]
       }
     ],
-    "Notification": [
-      {
-        "matcher": "permission_prompt|idle_prompt",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/notify-desktop.sh"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/notify-desktop.sh"
-          }
-        ]
-      }
-    ]
   },
   "worktree": {
     "baseRef": "fresh"
