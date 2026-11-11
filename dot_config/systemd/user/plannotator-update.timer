@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily plannotator update at 15:00 UTC
+
+[Timer]
+OnCalendar=*-*-* 15:00:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target

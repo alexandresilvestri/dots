@@ -1,0 +1,6 @@
+[Unit]
+Description=Update plannotator
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'curl -fsSL https://plannotator.ai/install.sh | bash'
