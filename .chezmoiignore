@@ -1,6 +1,7 @@
 CLAUDE.md
 CHEZMOI.md
 {{ if .work }}
+.claude/keybindings.json
 .config/autostart
 .config/fontconfig
 .config/hypr
