@@ -27,3 +27,7 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+o.window("org.omarchy.btop", { tag = "-floating-window" })
+o.window("org.omarchy.btop", { float = true })
+o.window("org.omarchy.btop", { center = true })
+o.window("org.omarchy.btop", { size = { 845, 789 } })
