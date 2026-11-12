@@ -36,6 +36,9 @@
           "interval": 5,
           "onClick": "omarchy-launch-or-focus-tui btop",
           "type": "command"
+        },
+        {
+          "id": "omarchy.power"
         }
       ],
       "centerBegin": [
