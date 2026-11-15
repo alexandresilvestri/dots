@@ -4,6 +4,7 @@
 - Short, conventional commits.
 - Never add new dependencies without ask me.
 - If you're unsure about an external API, consult the documentation; don't assume.
+- After you finish any task, keep the environment the same when you started the task. If you opened chromium tabs, up containers, clean it.
 - Memory: write the file when you learn the fact, not at session end. Triggers: something broke and you found why, an approach failed, I corrected you, I gave context the repo does not record.
 - Memory: if a session ends with nothing saved, say "no memory written" and why.
 
