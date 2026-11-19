@@ -75,6 +75,10 @@ alias dce="docker compose exec"
 alias dcr="docker compose exec app bin/rails"
 alias docker-s='docker kill $(docker ps -q)'
 alias docker-r='docker rm $(docker ps -a -q)'
+# Chezmoi
+alias ccd="chezmoi cd"
+alias cu="chezmoi update"
+alias ca="chezmoi apply"
 # -- Others --
 alias cat="bat --paging=never"
 alias ls="exa --icons"
