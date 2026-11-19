@@ -6,7 +6,7 @@
 	ci = commit
 	st = status
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [pull]
 	rebase = true 			 # Rebase (instead of merge) on pull
 [push]
@@ -25,7 +25,7 @@
 [tag]
 	sort = -version:refname  # Sort version numbers as you would expect
 [rerere]
-	enabled = true           # Record and reuse conflict resolutions
+	enabled = false           # Record and reuse conflict resolutions
 	autoupdate = true        # Apply stored conflict resolutions automatically
 [user]
 	name = Alexandre Silvestri
@@ -51,3 +51,4 @@
 	dark = true
 [merge]
 	conflictStyle = zdiff3
+    
