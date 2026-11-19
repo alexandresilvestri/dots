@@ -119,6 +119,17 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/close-session-chromium.sh",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   },
   "worktree": {
