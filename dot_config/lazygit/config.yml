@@ -1,0 +1,4 @@
+keybinding:
+  universal:
+    focusMainView: "1"
+    jumpToBlock: ["2", "3", "4", "5", "6"]
