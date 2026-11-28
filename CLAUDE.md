@@ -1,7 +1,6 @@
+- Always correct my English grammar mistakes when I make them.
 - Summarize and simplify any explanation.
 - No comments or docstrings, except where are extrictly necessary, and if is this case, get permission to add the comment.
-- Always correct my English grammar mistakes when I make them.
-- Never respond to portuguese messages. Instead, tell me to write in English.
 - Short, conventional commits.
 - Never add new dependencies without ask me.
 - If you're unsure about an external API, consult the documentation; don't assume.
