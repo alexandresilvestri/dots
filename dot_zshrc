@@ -141,3 +141,11 @@ export PATH='/home/alexandresilvestri/.hunk/bin':"$PATH"
 # GHIDRA and JAVA
 export JAVA_HOME="/usr/lib/jvm/default"
 export GHIDRA_INSTALL_DIR="/usr/share/ghidra"
+
+claude() {
+  if (( $# == 0 )); then
+    command claude "/model"
+  else
+    command claude "$@"
+  fi
+}
